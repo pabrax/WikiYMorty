@@ -1,17 +1,25 @@
-import Character from "./Characters"
+import CharacterTag from "./Characters"
 
 function ShowContent() {
 
     const tarjetas = []
 
     for (let i = 0; i < 3; i++) {
-        tarjetas.push(<Character key={i} characterID={randomInt(1, 50)} />)
+        tarjetas.push(<CharacterTag key={i} characterID={randomInt(1, 50)} />)
         
     }
     
     return (
-        <div className="container d-flex">
-            {tarjetas}
+        <div className="container-fluid">
+            <div className="row">
+                <div className="">
+                    {tarjetas}
+                </div>
+
+                <div className="">
+                    {tarjetas}
+                </div>
+            </div>
         </div>
     )
 }

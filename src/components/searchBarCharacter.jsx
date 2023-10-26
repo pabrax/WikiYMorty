@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import {  useState } from "react"
+import CharacterTag from "./Characters";
 
 
 export function SearchBarCharacterByName() {
@@ -22,7 +23,7 @@ export function SearchBarCharacterByName() {
             {SearchResult.length > 0 ? (
                 <ul>
                     {SearchResult.map((character)=> (
-                        <li key={character.id}>{character.name}</li>
+                        <Character key={character.id} characterID={character.id}/>
                     ))}
                 </ul>
             ) : (

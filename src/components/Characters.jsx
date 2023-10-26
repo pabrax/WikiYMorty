@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 
-function Character({ characterID }) {
+function CharacterTag({ characterID }) {
   const [characterData, setCharacterData] = useState(null);
 
   useEffect(() => {
@@ -12,13 +12,13 @@ function Character({ characterID }) {
   }, [characterID]);
 
   return (
-    <div className="card ">
+    <div className="card w-50 d-flex mb-4">
       {characterData ? (
-        <div className="bg-secondary text-light d-flex card-body">
+        <div className="bg-body d-flex card-body">
           
           <img
             src={characterData.image}
-            className="w-50 h-50"
+            className="m-0 p-0"
             alt="characterImage"
           />
           <div className="p-4">
@@ -36,4 +36,37 @@ function Character({ characterID }) {
   );
 }
 
-export default Character;
+
+function CharacterFullView() {
+
+    const [] = useState(null)
+
+    const [characterData, setCharacterData] = useState(null);
+
+    useEffect(() => {
+      fetch(`https://rickandmortyapi.com/api/character/${characterID}`)
+        .then((res) => res.json())
+        .then((data) => setCharacterData(data))
+        .catch((error) => console.error(error));
+    }, [characterID]);
+
+    return (
+        <div>
+            {characterData ? (
+                <div>
+                    <div>
+                        <h1>{characterData.name}</h1>
+                    </div>
+
+                    <div>
+                        
+                    </div>
+                </div>
+            ) : (
+                <div></div>
+            )}
+        </div>
+    )
+    
+}
+export default CharacterTag;

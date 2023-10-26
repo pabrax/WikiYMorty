@@ -1,12 +1,12 @@
+import SearchBarCharacterByName from "./searchBarCharacter"
+
 function NavBar() {
     return (
-        <nav className="navbar navbar-expand-lg  bg-body-tertiary ">
+        <nav className="navbar navbar-expand-lg  bg-body-tertiary bg-dark" data-bs-theme="dark">
             
             <div className="container-fluid">
-                <a className="navbar-brand" href="#">home</a>
-                <a className="navbar-brand" href="#">Characters</a>
-                <a className="navbar-brand" href="#">Locations</a>
-                <a className="navbar-brand" href="#">Episodes</a>
+                <a className="navbar-brand" href="/">home</a>
+                <SearchBarCharacterByName/>
             </div>
         </nav>
     )
@@ -15,8 +15,8 @@ function NavBar() {
 function WikiYmorty() {
     
     return (
-        <div className="text-success text-center">
-            <h1 style="font-size : 24px">Rick y Morty Wiki</h1>
+        <div className="text-success text-center" >
+            <h1>Rick y Morty Wiki</h1>
             <p>Esta es una wiki de Rick y Morty</p>
         </div>
     )

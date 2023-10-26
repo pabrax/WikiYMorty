@@ -1,4 +1,4 @@
-import Character from './components/Characters';
+import CharacterTag from './components/Characters';
 import SearchBarCharacterByName from './components/searchBarCharacter';
 import PrimeraVista from './components/header';
 import ShowContent from './components/body';
