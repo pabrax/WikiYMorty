@@ -1,7 +1,9 @@
+import '../assets/styles/Footer.css'
+
 function Footer() {
     return (
-        <div className="bg-dark text-white text-center bg-dark">
-            <a href="https://rickandmortyapi.com/" target="_blank" className="fs-5">visita la web oficial de la api</a>
+        <div className="finCont  text-white text-center">
+            <a href="https://rickandmortyapi.com/" target="_blank" className="fs-5 link-underline link-underline-opacity-0 link-body-emphasis link-underline-opacity-75-hover">visita la web oficial de la api</a>
         </div>
     )
 }

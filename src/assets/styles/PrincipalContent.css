@@ -3,12 +3,12 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background: #323532;
+    background: #222831;
 }
 
 .sC {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 4.5rem 0px;
+    padding: 2.5rem 0px;
 }

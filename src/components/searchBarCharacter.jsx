@@ -33,32 +33,4 @@ function SearchBarCharacterByName() {
     )
 }
 
-
-function CharacterByStatus() {
-
-    const [characterData, setCharacterData] = useState(null);
-
-    function handleSearch() {
-        fetch(`https://rickandmortyapi.com/api/character/?status=alive`)
-        .then((res) => res.json())
-        .then((data) => setSearchResult(data.results))
-        .catch((error) => console.error(error));
-    }
-
-    return (
-        <div>
-            <button onClick={handleSearch}>Personajes vivos</button>
-        </div>
-    )
-}
-
-
-function CharacterBySpecie() {
-    return (
-        <div></div>
-    )
-}
-
-
-
 export default SearchBarCharacterByName;
