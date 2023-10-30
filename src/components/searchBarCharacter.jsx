@@ -3,7 +3,7 @@ import {  useState } from "react"
 import CharacterTag from "./Characters";
 
 
-export function SearchBarCharacterByName() {
+function SearchBarCharacterByName() {
 
     const [searchQuery, setSearchQuery] = useState('');
     const [SearchResult, setSearchResult] = useState([]);
@@ -23,13 +23,39 @@ export function SearchBarCharacterByName() {
             {SearchResult.length > 0 ? (
                 <ul>
                     {SearchResult.map((character)=> (
-                        <Character key={character.id} characterID={character.id}/>
+                        <CharacterTag key={character.id} characterID={character.id}/>
                     ))}
                 </ul>
             ) : (
                 <div>no se encontraron resultados.</div>
             )}
         </div>
+    )
+}
+
+
+function CharacterByStatus() {
+
+    const [characterData, setCharacterData] = useState(null);
+
+    function handleSearch() {
+        fetch(`https://rickandmortyapi.com/api/character/?status=alive`)
+        .then((res) => res.json())
+        .then((data) => setSearchResult(data.results))
+        .catch((error) => console.error(error));
+    }
+
+    return (
+        <div>
+            <button onClick={handleSearch}>Personajes vivos</button>
+        </div>
+    )
+}
+
+
+function CharacterBySpecie() {
+    return (
+        <div></div>
     )
 }
 

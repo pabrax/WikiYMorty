@@ -1,26 +1,12 @@
 function NavBar() {
   return (
-    <div className="">
-      <div className="">
-        <a
-          href="#"
-         
-          aria-current="true"
-        >
-          home
-        </a>
-        <a href="#" class="">
-          Characters
-        </a>
-        <a href="#" class="">
-          Locations
-        </a>
-        <a href="#" class="">
-          Episodes
-        </a>
-      </div>
-    </div>
-  );
+      <nav className="navbar navbar-expand-lg  bg-body-tertiary bg-dark" data-bs-theme="dark">
+          
+          <div className="container-fluid justify-content-center align-items-center">
+              <a className="navbar-brand" href="/">Rick Y Morty Api Fetch</a>
+          </div>
+      </nav>
+  )
 }
 
-export default NavBar;
+export default NavBar
