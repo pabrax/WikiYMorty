@@ -1,0 +1,16 @@
+.CharacterCard {
+    width: 600px;
+    height: 220px;
+    display: flex;
+    overflow: hidden;
+    margin: 0.75rem;
+    border-radius: 0.5rem;
+
+}
+.CcContent {
+    flex: 3 1 0%;
+    position: relative;
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,14 @@
+.PcCrdContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #323532;
+}
+
+.sC {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4.5rem 0px;
+}

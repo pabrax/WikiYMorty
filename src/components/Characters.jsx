@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
+import '../assets/Character.css'
 
 function CharacterTag({ characterID }) {
   const [characterData, setCharacterData] = useState(null);
@@ -12,37 +13,29 @@ function CharacterTag({ characterID }) {
   }, [characterID]);
 
   return (
-    <div className="ms-4 me-4">
+    <>
       {characterData ? (
-        <div className="w-100 bg-body d-flex mb-4">
-          
-          <img
-            src={characterData.image}
-            className=""
-            alt="characterImage"
-          />
-          <div className="p-4">
+        <div className="bg-body CharacterCard">
+          <div className=" d-flex">
+            <img src={characterData.image} alt="characterImage" />
+          </div>
+          <div className="CcContent">
             <h3>nombre {characterData.name}</h3>
             <p>stado: {characterData.status}</p>
             <p>especie: {characterData.species}</p>
             <p>origin: {characterData.origin.name}</p>
-            <p>Last Location: {characterData.location.name}</p>
-            <p> created at: {characterData.created}</p>
+            <p>{characterData.location.name}</p>
           </div>
         </div>
       ) : (
         <div>loading...</div>
       )}
-    </div>
+    </>
   );
 }
 
-
-
 function TagCharacter() {
-  return (
-    <div></div>
-  )
+  return <div></div>;
 }
 
 export default CharacterTag;

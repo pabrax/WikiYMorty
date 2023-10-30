@@ -1,4 +1,5 @@
 import CharacterTag from "./Characters";
+import "../assets/PrincipalContent.css";
 
 function ShowContent() {
   const tarjetas = [];
@@ -8,10 +9,16 @@ function ShowContent() {
   }
 
   return (
-    <div className="container-fluid d-flex p-0 mt-10">
-      <div className="">{tarjetas}</div>
-      <div className="">{tarjetas}</div>
-    </div>
+    <section className="sC">
+      <div className="PcCrdContainer">
+        <CharacterTag characterID={randomInt(1, 50)} />
+        <CharacterTag characterID={randomInt(1, 50)} />
+        <CharacterTag characterID={randomInt(1, 50)} />
+        <CharacterTag characterID={randomInt(1, 50)} />
+        <CharacterTag characterID={randomInt(1, 50)} />
+        <CharacterTag characterID={randomInt(1, 50)} />
+      </div>
+    </section>
   );
 }
 
