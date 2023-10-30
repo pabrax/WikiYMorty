@@ -1,22 +1,26 @@
 // components
 import Header from './components/Headers'
-import Main from './components/PrincipalContent'
+import MainContent from './components/MainContent'
 import Footer from './components/Footers'
 import NavBar from './components/NavBar'
 import Paginations from "./components/paginations";
 
 // styles
 import './assets/styles/App.css'
+import { useState } from 'react';
 
 
 // main Function
 function App() {
+
+  const [pageID, setPageID] = useState(1)
   
   return (
     <div className='App'>
       <NavBar />
       <Header />
-      <Main/>
+      <MainContent PageID={pageID}/>
+      <Paginations counter={pageID} setCounter={setPageID}/>
       <Footer/>
     </div>
   )

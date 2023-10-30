@@ -1,24 +1,42 @@
 import React, { useEffect, useState } from "react";
-import CharacterTag from "./Characters";
+import Character from "./Characters";
 
 function paginations({ counter, setCounter }) {
+
+  const handlePreviousClick = () => {
+    if (counter > 0) {
+      setCounter(counter - 1);
+    }
+  };
+
+  const handleNextClick = () => {
+    if (counter < 42) {
+      setCounter(counter + 1);
+    }
+  };
+
+
   return (
     <nav aria-label="Page navigation example">
       <ul className="pagination justify-content-center">
         <li className="page-item">
-          <a
-            className="page-link"
-            onClick={() => setCounter(counter - 1)}
-            href="#"
-          >
-            Previous
-          </a>
+          {counter <= 0 ? (
+            <></>
+          ): (
+            <a
+              className="page-link"
+              onClick={handlePreviousClick}
+              href="#"
+            >
+              Previous
+            </a>
+          )}
         </li>
         <li className="page-item">
           {counter <= 0 ? (
             <></>
           ) : (
-            <a className="page-link" href="#">
+            <a className="page-link"  onClick={handlePreviousClick} href="#">
               {counter - 1}
             </a>
           )}
@@ -32,7 +50,7 @@ function paginations({ counter, setCounter }) {
           {counter >= 42 ? (
             <></>
           ) : (
-            <a className="page-link" href="#">
+            <a className="page-link"  onClick={handleNextClick} href="#">
               {counter + 1}
             </a>
           )}
@@ -43,7 +61,7 @@ function paginations({ counter, setCounter }) {
           ) : (
             <a
               className="page-link"
-              onClick={() => setCounter(counter + 1)}
+              onClick={handleNextClick}
               href="#"
             >
               Next
@@ -70,7 +88,7 @@ export function SearchByPages({ pageID }) {
       {content.length > 0 ? (
         <>
           {content.map((character) => (
-            <CharacterTag key={character.id} characterID={character.id} />
+            <Character key={character.id} characterID={character.id} />
           ))}
         </>
       ) : (

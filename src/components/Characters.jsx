@@ -1,8 +1,10 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
+
+// sytles
 import '../assets/styles/Character.css'
 
-function CharacterTag({ characterID }) {
+function Character({ characterID }) {
   const [characterData, setCharacterData] = useState(null);
 
   useEffect(() => {
@@ -39,8 +41,5 @@ function CharacterTag({ characterID }) {
   );
 }
 
-function TagCharacter() {
-  return <div></div>;
-}
 
-export default CharacterTag;
+export default Character;
