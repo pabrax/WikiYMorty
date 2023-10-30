@@ -1,0 +1,18 @@
+.nbdc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px auto;
+    width: 100%;
+    min-height: 60px;
+    padding: 0 1.5rem;
+    background-color: #363636;
+}
+
+.ulnavbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
