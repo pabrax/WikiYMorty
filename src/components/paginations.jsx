@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
-import Character from "./Characters";
+import React from "react";
 
-function paginations({ counter, setCounter }) {
+function PaginationBar({ counter, setCounter }) {
   const handlePreviousClick = () => {
     if (counter > 0) {
       setCounter(counter - 1);
@@ -65,29 +64,4 @@ function paginations({ counter, setCounter }) {
   );
 }
 
-export function SearchByPages({ pageID }) {
-  const [content, setContent] = useState([]);
-
-  useEffect(() => {
-    fetch(`https://rickandmortyapi.com/api/character/?page=${pageID}`)
-      .then((res) => res.json())
-      .then((data) => setContent(data.results))
-      .catch((error) => console.error(error));
-  }, [pageID]);
-
-  return (
-    <>
-      {content.length > 0 ? (
-        <>
-          {content.map((character) => (
-            <Character key={character.id} characterID={character.id} />
-          ))}
-        </>
-      ) : (
-        <></>
-      )}
-    </>
-  );
-}
-
-export default paginations;
+export default PaginationBar;

@@ -2,8 +2,9 @@
 import { useEffect, useState } from "react";
 
 // sytles
-import '../assets/styles/Character.css'
+import "../assets/styles/Character.css";
 
+// Crea una tarjeta que contiene informacion del personaje
 function Character({ characterID }) {
   const [characterData, setCharacterData] = useState(null);
 
@@ -24,7 +25,9 @@ function Character({ characterID }) {
           <div className="CcContent">
             <div className="Ccsection">
               <h3>{characterData.name}</h3>
-              <span>{characterData.status} - {characterData.species}</span>
+              <span>
+                {characterData.status} - {characterData.species}
+              </span>
             </div>
             <div className="Ccsection">
               <span>Origin: </span>
@@ -40,6 +43,5 @@ function Character({ characterID }) {
     </>
   );
 }
-
 
 export default Character;

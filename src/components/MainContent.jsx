@@ -1,6 +1,6 @@
 import Character from "./Characters";
 import "../assets/styles/PrincipalContent.css";
-import { SearchByPages } from "./paginations";
+import SearchByPages from "./SearchByPages";
 
 function MainContent({ PageID, SearchResults }) {
   const TagPreview = [];
@@ -8,8 +8,6 @@ function MainContent({ PageID, SearchResults }) {
   for (let i = 0; i < 11; i++) {
     TagPreview.push(<Character key={i} characterID={randomInt(i, 50)} />);
   }
-
-  console.log(SearchResults);
 
   return (
     <section className="sC">
@@ -43,4 +41,3 @@ function randomInt(min, max) {
 }
 
 export default MainContent;
-

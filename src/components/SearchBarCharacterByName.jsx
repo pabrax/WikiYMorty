@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
-import Character from "./Characters";
 
+// crea una barra de busqueda que filtra por el nombre
 function SearchBarCharacterByName({ onSearchResults }) {
   const [searchQuery, setSearchQuery] = useState("");
   const [SearchResult, setSearchResult] = useState([]);
