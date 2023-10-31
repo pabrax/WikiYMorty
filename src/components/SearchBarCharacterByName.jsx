@@ -17,14 +17,15 @@ function SearchBarCharacterByName({ onSearchResults }) {
   }
 
   return (
-    <div className="d-flex">
+    <div className="d-flex justify-content-center ps-4 pe-4">
       <input
+        className="form-control "
         type="text"
         placeholder="Buscar Personajes..."
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
       />
-      <button onClick={handleSearch}>Buscar</button>
+      <button className="btn btn-primary" onClick={handleSearch}>Buscar</button>
     </div>
   );
 }

@@ -7,10 +7,10 @@ function NavBar() {
         <img src="./home-rick-sanchez.svg" alt="" />
       </a>
       <ul className="list-group list-group-horizontal">
-        <li className="list-group-item list-group-item-success">
+        <li className="list-group-item">
           <a href="https://rickandmortyapi.com/">Api</a>
         </li>
-        <li className="list-group-item list-group-item-success">
+        <li className="list-group-item">
           <a href="https://github.com/pabrax/practicaReact">Github</a>
         </li>
       </ul>
