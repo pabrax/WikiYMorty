@@ -1,28 +1,34 @@
 import Character from "./Characters";
 import "../assets/styles/PrincipalContent.css";
-import Paginations, { SearchByPages } from "./paginations";
-import { useState } from "react";
+import { SearchByPages } from "./paginations";
 
-function MainContent({PageID, setPageID}) {
+function MainContent({ PageID, SearchResults }) {
   const TagPreview = [];
 
   for (let i = 0; i < 11; i++) {
     TagPreview.push(<Character key={i} characterID={randomInt(i, 50)} />);
   }
 
+  console.log(SearchResults);
+
   return (
     <section className="sC">
       {PageID > 0 ? (
         <div className="PcCrdContainer">
-          <SearchByPages pageID={PageID} />
+          {SearchResults.length > 0 ? (
+            <>
+              {SearchResults.map((character) => (
+                <Character key={character.id} characterID={character.id} />
+              ))}
+            </>
+          ) : (
+            <SearchByPages pageID={PageID} />
+          )}
         </div>
       ) : (
         <div className="PcCrdContainer">
           {TagPreview.map((character, index) => (
-            <Character
-              key={index}
-              characterID={character.props.characterID}
-            />
+            <Character key={index} characterID={character.props.characterID} />
           ))}
         </div>
       )}
@@ -37,3 +43,4 @@ function randomInt(min, max) {
 }
 
 export default MainContent;
+
