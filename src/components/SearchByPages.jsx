@@ -1,3 +1,6 @@
+import { useState, useEffect } from "react";
+import Character from './Characters'
+
 function SearchByPages({ pageID }) {
   const [content, setContent] = useState([]);
 
