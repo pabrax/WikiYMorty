@@ -13,13 +13,15 @@ Este proyecto fue desarrollado utilizando React y ViteJS en JavaScript. La aplic
 
 ### Instrucciones de Uso
 
-1. Clona el repositorio: `git clone https://github.com/pabrax/practicaReact.git`
+1. Clona el repositorio: `git clone https://github.com/pabrax/WikiYMorty.git`
 
-2. Instala las dependencias: `npm install`
+2. Muevete al repositorio con `cd WikiYMorty` 
 
-3. Inicia la aplicación: `npm run dev`
+3. Instala las dependencias: `npm install`
 
-4. Abre tu navegador y visita `http://localhost:5173`
+4. Inicia la aplicación: `npm run dev`
+
+5. Abre tu navegador y visita `http://localhost:5173`
 
 
 ### Capturas
