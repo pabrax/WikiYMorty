@@ -1,8 +1,29 @@
-# React + Vite
+# Wiki y Morty
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Descripcion
 
-Currently, two official plugins are available:
+Este proyecto fue desarrollado utilizando React y ViteJS en JavaScript. La aplicación consiste en un cliente web que realiza solicitudes a la API de Rick and Morty utilizando el método `fetch`. Los datos obtenidos se presentan de manera interactiva, permitiendo a los usuarios filtrar la información de los personajes de la serie.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Tecnologías Utilizadas
+
+- React
+- ViteJS
+- JavaScript (ES6+)
+- Bootstrap
+
+### Instrucciones de Uso
+
+1. Clona el repositorio: `git clone https://github.com/pabrax/practicaReact.git`
+
+2. Instala las dependencias: `npm install`
+
+3. Inicia la aplicación: `npm run dev`
+
+4. Abre tu navegador y visita `http://localhost:5173`
+
+
+### Capturas
+
+![Main content](/public/Screenshot.png)
+
+----
